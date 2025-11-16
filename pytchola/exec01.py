@@ -18,8 +18,13 @@ print(resultado1)
 tinta = 3.6
 lata = round(litros) / tinta
 resultado2 = round(lata)
-print(resultado2)
+print(resultado2) #aqui vai imprimir a quantidade de latas
 tintaVAL = round(lata) * 107
 print('numero latas:',resultado2)
 print('valor gasto:', tintaVAL)
-
+'''
+asjakshkajskahsjjc
+ekckehckjehdcjhekchkecd
+ecbkecjehckhdjk
+edjl
+'''
