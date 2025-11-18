@@ -10,8 +10,3 @@ if consumo > 200:
 else:
     ValConta = consumo * 0.50
     print(f'O valor final da sua conta será: R$ {ValConta:.2f}')
-
-
-
-
-
