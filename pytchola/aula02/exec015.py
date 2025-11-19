@@ -1,5 +1,5 @@
 '''
-4) Crie um programa que leia três notas de um aluno e calcule a média aritmética.
+15) Solicita três notas de um aluno, calcular a média e informar se ele está aprovado ou não, considerando a média de aprovação maior ou igual a 6. 
 '''
 nota1 = int(input('qual a a primeira nota a ser somada?'))
 nota2 = int(input('qual a segunda nota a ser somada?'))
