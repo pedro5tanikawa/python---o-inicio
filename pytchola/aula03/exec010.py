@@ -19,20 +19,17 @@ while True:
                 print("Opção inválida. Digite masculino, feminino ou fim.")
                 continue
             salario = float(input('e qual o seu salario amigo(a): R$'))
-            
             if genero == "masc":
                     masc +=  1
                     salMasc += salario
             elif genero == "fem":
                     fem += 1
                     salFem += salario
-            
             funcionarios += 1
 if funcionarios > 0:
     media = (salMasc + salFem) / funcionarios
 else:
-       media = 0
-            
+       media = 0            
 print(f'quantidade de funcionarios homens: {masc} e a soma de seus salarios é: {salMasc:.2f}')
 print(f'a quantidade de funcionarias é: {fem} e a soma de seus salarios é: {salFem:.2f}')
 print(f'a media salaria da empresa é: {media}')
