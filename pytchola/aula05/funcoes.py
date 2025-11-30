@@ -62,3 +62,4 @@ def situacao(nota1,nota2):
 
 def descontador(valor,desc):
     return (valor - (valor*(desc/100)))
+
