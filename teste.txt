@@ -1,0 +1,3 @@
+arroz, 20
+feijão, 15
+açúcar, 10
