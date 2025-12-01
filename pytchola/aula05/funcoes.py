@@ -63,3 +63,58 @@ def situacao(nota1,nota2):
 def descontador(valor,desc):
     return (valor - (valor*(desc/100)))
 
+funcionarios = []
+with open("funcionarios.txt", "r", encoding="utf-8") as arquivo:
+    for linha in arquivo:
+        linha = linha.strip()
+        nome, idade = linha.split(',')
+        idade = int(idade)
+        funcionarios.append([nome,idade])
+
+print('\nFuncionarios cadastrados:')
+for f in funcionarios:
+    print(f'{f[0]} - {f[1]} anos')
+
+soma = 0
+for f in funcionarios:
+    soma += f[1]
+media = soma / len(funcionarios)
+print(f'a media das idades dos funcionarios é: {media:.2f} anos\n')
+
+while True:
+    print("\nMenu:")
+    print("1 - Adicionar funcionário")
+    print("2 - Remover funcionário")
+    print("3 - Salvar e sair")
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        nome = input("Nome: ")
+        idade = int(input("Idade: "))
+        funcionarios.append([nome, idade])
+        print("Funcionário adicionado!")
+
+    elif opcao == "2":
+        print("\nFuncionários:")
+        for i, f in enumerate(funcionarios):
+            print(f"{i} - {f[0]} ({f[1]} anos)")
+
+        indice = int(input("Digite o número do funcionário para remover: "))
+        if 0 <= indice < len(funcionarios):
+            removido = funcionarios.pop(indice)
+            print(f"{removido[0]} removido!")
+        else:
+            print("Índice inválido.")
+
+    elif opcao == "3":
+        # Salvar no arquivo novamente
+        with open("funcionarios.txt", "w", encoding="utf-8") as arquivo:
+            for f in funcionarios:
+                arquivo.write(f"{f[0]},{f[1]}\n")
+
+        print("Alterações salvas. Saindo...")
+        break
+
+    else:
+        print("Opção inválida.")
+
