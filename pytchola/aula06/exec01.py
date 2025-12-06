@@ -7,6 +7,8 @@ class Pessoa:
         self.idade = idade
     def exibir_info(self):
         print(f'Nome: {self.nome} | Idade: {self.idade}')
-pessoa = Pessoa('Pedrinho',26)
+name = input('informe seu nome: ')
+age = input('informe sua idade: ')
+pessoa1 = Pessoa(name,age)
 #print(f'Nome: {pessoa.nome} | Idade: {pessoa.idade}')
-pessoa.exibir_info() #o () indica pro programa que é uma funçao
+pessoa1.exibir_info() #o () indica pro programa que é uma funçao

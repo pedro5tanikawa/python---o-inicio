@@ -8,16 +8,16 @@
     Um método chamado repor que aumenta o estoque ao receber novas unidades. 
 '''
 class Produto:
-    def __init__(self, nome, preco: float, estoque):
+    def __init__(self, nome: str, preco: float, estoque: int): #pra evitar erros SEMPRE defina o tipo de conteudo que seja inserido em cada self da classe
         self.nome = nome
         self.preco = preco
         self.estoque = estoque
     def vender(self, quantidade):
-        if quantidade < self.estoque:
+        if (quantidade < self.estoque): #o conteudo do if dentro de parenteses faz o codigo ser mais legivel, mais profissional
             self.estoque -= quantidade
-            print('venda possivel')
+            print(f'Foram vendidas {quantidade} unidade(s)')
         else:
-            print('venda inconcluida')
+            print('venda inconcluida, estoque insuficiente')
     def repor(self,qtd):
         if qtd > 0:
             self.estoque += qtd
